@@ -5,5 +5,12 @@ console.log(button);
 
 
 button.addEventListener('click', function(){
-    lamp.src = '../img/yellow_lamp.png';
+    if(lamp.src.includes('white')){
+        lamp.src = '../img/yellow_lamp.png';
+        button.innerText = 'Spegni';
+    }else{
+        lamp.src = '../img/white_lamp.png';
+        button.innerText = 'Accendi';
+    }
 })
+
